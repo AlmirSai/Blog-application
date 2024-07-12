@@ -56,17 +56,3 @@ To-Do:
 
  Add more features.
 
-License:
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Here's a breakdown of the changes:
-
- Title: Uses a more descriptive and engaging title.
- Description: Adds a brief overview of the blog application.
- Stack: Highlights the key technology used.
- Getting Started:  Provides clear and concise instructions for setting up the project.
- Project Structure:  Presents a visual representation of the project structure.
- Features:  Outlines the key functionalities of the application.
- To-Do:  Includes a section for potential future additions.
- License:  Specifies the project's license.
