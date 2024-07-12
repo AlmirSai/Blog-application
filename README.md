@@ -1,4 +1,3 @@
-```
 # 💻 Blog Application
 
 ## A simple blog application built with Django.
@@ -60,7 +59,6 @@ To-Do:
 License:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
 Here's a breakdown of the changes:
 
