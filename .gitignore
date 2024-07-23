@@ -1,7 +1,10 @@
-.venv
+.idea/
+.vscode/
+
 .env
+.venv/
 
-/shelf/
-/workspace.xml
+db.sqlite3
+migrations/
 
-mysite/db.sqlite3
+__pycache__
