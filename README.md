@@ -56,3 +56,6 @@ To-Do:
 
  Add more features.
 
+
+Test on:
+mac os
