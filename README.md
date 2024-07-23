@@ -28,7 +28,7 @@ Getting Started:
 Project Structure:
 
 ```
-mysite/
+django/
 ├── blog/
 │   ├── __init__.py
 │   ├── models.py
