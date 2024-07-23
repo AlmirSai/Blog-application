@@ -15,7 +15,7 @@ Getting Started:
 
 2. Start Development Server:
    ```bash
-   cd mysite
+   cd django
    python manage.py runserver
    ```
    Note: This project uses a `.env` file to store the `SECRET_KEY` from `settings.py`.  You need to obtain or generate a new secret key to activate the project.
