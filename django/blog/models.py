@@ -1,3 +1,5 @@
+from ast import Index
+from typing import Literal
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
@@ -6,8 +8,8 @@ from django.utils import timezone
 class Post(models.Model):
 
     class Status(models.TextChoices):
-        DRAFT = 'DF', 'Draft'
-        PUBLISHED = 'PB', 'Published'
+        DRAFT: tuple[Literal['DF']] = 'DF', 'Draft'
+        PUBLISHED: tuple[Literal['DF']] = 'PB', 'Published'
 
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
@@ -27,10 +29,10 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = ['-publish']
-        indexes = [
+        ordering: list[str] = ['-publish']
+        indexes: list[Index] = [
             models.Index(fields=['-publish'])
         ]
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.title
