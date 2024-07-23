@@ -24,6 +24,7 @@ Getting Started:
    ```bash
    python manage.py createsuperuser
    ```
+4. You need to generate django key and migrate database
 
 Project Structure:
 
