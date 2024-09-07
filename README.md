@@ -31,6 +31,13 @@ Getting Started:
    python manage.py createsuperuser
    ```
 
+Start project:
+
+```
+- cd mySite
+- python manage.py runserver
+```
+
 Project Structure:
 
 ```
