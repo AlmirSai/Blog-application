@@ -1,14 +1,16 @@
 Getting Started:
 
-1. Install Dependencies:
-   ```bash
-   pip install Django
-   ```
 
-2. Create a Virtual Environment (Recommended):
+
+1. Create a Virtual Environment (Recommended):
    ```bash
    python3 -m venv .venv  # Create a virtual environment
    source .venv/bin/activate  # Activate the environment
+   ```
+
+2. Install Dependencies:
+   ```bash
+   pip install Django
    ```
 
 3. Set up Environment Variables:
