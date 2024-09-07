@@ -1,11 +1,3 @@
-# 💻 Blog Application
-
-## A simple blog application built with Django.
-
-Stack:
-
- Django
-
 Getting Started:
 
 1. Install Dependencies:
@@ -13,14 +5,26 @@ Getting Started:
    pip install Django
    ```
 
-2. Start Development Server:
+2. Create a Virtual Environment (Recommended):
+   ```bash
+   python3 -m venv .venv  # Create a virtual environment
+   source .venv/bin/activate  # Activate the environment
+   ```
+
+3. Set up Environment Variables:
+    Create a `.env` file in the secrets directory of the project.
+    Add the following line to your `.env` file, replacing `your_secret_key` with a secure secret key:
+     ```
+     SECRET_KEY=your_secret_key
+     ```
+
+4. Start Development Server:
    ```bash
    cd mysite
    python manage.py runserver
    ```
-   Note: This project uses a `.env` file to store the `SECRET_KEY` from `settings.py`.  You need to obtain or generate a new secret key to activate the project.
 
-3. Create a Super User:
+5. Create a Super User:
    ```bash
    python manage.py createsuperuser
    ```
@@ -38,7 +42,7 @@ django/
 │       └── blog/
 │
 ├── mysite/
-│   ├──secrets
+│   ├──secrets/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
@@ -46,17 +50,16 @@ django/
 └── manage.py
 ```
 
-Features:
+Testing:
 
- Create, edit, and delete blog posts.
- Manage user accounts.
- Filter posts by status.
- Search for posts.
+ Framework:  pytest
+ Coverage:  ... (Add code coverage report details here)
+
+Deployment:
+
+ Instructions for deploying to Heroku (or your preferred platform).
 
 To-Do:
 
- Add more features.
-
-
-Test on:
-mac os
+ Add support for post categories.
+ Implement user
