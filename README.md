@@ -1,3 +1,3 @@
 # 💻 Blog Application
 
-# SELECT BRANCH 'DEVELOPER'
+# SELECT BRANCH 'MASTER', this is preview branch 'main', for developming use branch 'master'
