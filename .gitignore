@@ -1,0 +1,7 @@
+secrets/
+__pycache__/
+migrations/
+.venv/
+.idea/
+db.sqlite3
+.env
