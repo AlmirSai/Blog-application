@@ -3,5 +3,6 @@ __pycache__/
 migrations/
 .venv/
 .idea/
+.vscode/
 db.sqlite3
 .env
