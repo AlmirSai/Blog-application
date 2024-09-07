@@ -1,3 +1,3 @@
 # 💻 Blog Application
 
-# SELECT BRANCH 'DEVELOPER'
+# NOT COMPLITE
