@@ -34,8 +34,7 @@ Getting Started:
 Start project:
 
 ```
-- cd mySite
-- python manage.py runserver
+cd mySite && python manage.py runserver
 ```
 
 Project Structure:
