@@ -1,46 +1,22 @@
-Getting Started:
+# Blog Application
 
+## Short describe
+This is pross-platform E-commeres Django application
+In this project You can create post's, user's and manage your user's and post's
 
+In this project author use .env file for Django key. You need to generate him in .env file
 
-1. Create a Virtual Environment (Recommended):
-   ```bash
-   python3 -m venv .venv  # Create a virtual environment
-   source .venv/bin/activate  # Activate the environment
-   ```
-
-2. Install Dependencies:
-   ```bash
-   pip install Django
-   ```
-
-3. Set up Environment Variables:
-    Create a `.env` file in the secrets directory of the project.
-    Add the following line to your `.env` file, replacing `your_secret_key` with a secure secret key:
-     ```
-     SECRET_KEY=your_secret_key
-     ```
-
-4. Start Development Server:
-   ```bash
-   cd mysite
-   python manage.py runserver
-   ```
-
-5. Create a Super User:
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-Start project:
-
+## Comming soon:
 ```
-cd mySite && python manage.py runserver
+- tests
+- loggging
+- production enviroment
 ```
 
-Project Structure:
+## Project Structure:
 
 ```
-django/
+mySite/
 ├── blog/
 │   ├── __init__.py
 │   ├── models.py
@@ -58,16 +34,72 @@ django/
 └── manage.py
 ```
 
-Testing:
+## Getting Started:
+THis Roadmap for MacOS user's
 
- Framework:  pytest
- Coverage:  ... (Add code coverage report details here)
+1. Install python
+   ```bash
+   brew install python
+   ```
+2. Create a Virtual Environment (Recommended):
+   ```bash
+   python3.12 -m venv .venv  # For this project ,please, use Python 3.12 version minimum 
+   source .venv/bin/activate  
+   ```
 
-Deployment:
+3. Install Dependencies:
+   ```bash
+   pip install Django
+   ```
 
- Instructions for deploying to Heroku (or your preferred platform).
+4. Set up Environment Variables:
+   Create a `.env` file in the secrets directory of the project.
+   Add the following line to your `.env` file, replacing `your_secret_key` with a secure secret key:
+   Directory:
+   
+   ```
+   mkdir mySite/mySite/secrets
+   cd mySite/mySite/secrets
+   touch .env
+   ```
+   ```
+   mySite/
+   ├── mysite/
+   │   ├──secrets/
+   |       |-.env
+   ```
+   ```
+     SECRET_KEY=your_secret_key
+   ```
 
-To-Do:
+5. Create a Super User:
+   ```bash
+   python manage.py createsuperuser
+   ```
 
- Add support for post categories.
- Implement user
+6. Start Development Server:
+   ```bash
+   cd mysite
+   python manage.py runserver
+   ```
+
+## Start project:
+
+```
+cd mySite && python manage.py runserver
+```
+
+## Testing:
+Comming soon. In this project author use:
+```
+- pylintr
+- flake8
+- pytest
+```
+
+## Deployment:
+This project could support in future
+Project could place on Yandex Cloud, Selectel and maybe on other cloud services
+
+## To-Do:
+For this project author use miro: https://miro.com/app/board/uXjVKhsawVA=/
