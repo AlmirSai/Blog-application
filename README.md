@@ -49,7 +49,7 @@ THis Roadmap for MacOS user's
 
 3. Install Dependencies:
    ```bash
-   pip install Django
+   pip install -r requirements.txt
    ```
 
 4. Set up Environment Variables:
@@ -71,26 +71,36 @@ THis Roadmap for MacOS user's
    ```
      SECRET_KEY=your_secret_key
    ```
-
-5. Create a Super User:
+5. Make migrations
+   ```
+   cd mysite/blog
+   mkdir migrations
+   touch migrations/__init__.py
+   cd ../
+   python manage.py migrate
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+6. Create a Super User:
    ```bash
    python manage.py createsuperuser
    ```
 
-6. Start Development Server:
+7. Start Development Server:
    ```bash
-   cd mysite
+   cd mysite # main mysite folder
+   # pwd Blog-application/mysite
    python manage.py runserver
    ```
 
 ## Start project:
 
 ```
-cd mySite && python manage.py runserver
+cd mysite && python manage.py runserver
 ```
 
 ## Testing:
-Comming soon. In this project author use:
+Coming soon. In this project author use:
 ```
 - pylintr
 - flake8
