@@ -7,9 +7,9 @@ from django.contrib.auth.models import User
 
 
 class PublishedManager(models.Manager):
-    """Class for managment"""
-    def get_queryset(self):
-        """Method for parsing queryset's"""
+    """Class for management query sets"""
+    def get_queryset(self) -> models.QuerySet:
+        """Method for parsing query set's"""
         return super().get_queryset()\
             .filter(status=Post.Status.PUBLISHED)
 
@@ -18,15 +18,15 @@ class Post(models.Model):
     """Class Post for database"""
     class Status(models.TextChoices):
         """Post Status class"""
-        DRAFT = 'DF', 'Draft'
-        PUBLISHED = 'PB', 'Published'
+        DRAFT: tuple[str, str] = 'DF', 'Draft'
+        PUBLISHED: tuple[str, str] = 'PB', 'Published'
 
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='blog_posts'
+        related_name='blog_post'
     )
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now())
@@ -43,12 +43,12 @@ class Post(models.Model):
 
     class Meta:
         """Class for sorting post's"""
-        ordering = ['-publish']
-        indexes = [
+        ordering: list[str] = ['-publish']
+        indexes: list[models.Index] = [
             models.Index(fields=['-publish'])
         ]
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Method for parsing strings.
         Yeah, this method return not string
         """

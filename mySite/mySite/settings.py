@@ -6,19 +6,21 @@ to start this project!!!
 
 import os
 from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-SECRET_KEY = os.getenv('SECRET_KEY', 'secrets')
+from typing import Any
 
 
-DEBUG = True
-
-ALLOWED_HOSTS = []
+BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
 
-INSTALLED_APPS = [
+SECRET_KEY: str = os.getenv('SECRET_KEY', 'secrets')
+
+
+DEBUG: bool = True
+
+ALLOWED_HOSTS: list = []
+
+
+INSTALLED_APPS: list[str] = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -29,7 +31,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE: list[str] = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -39,9 +41,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "mySite.urls"
+ROOT_URLCONF: str = "mySite.urls"
 
-TEMPLATES = [
+TEMPLATES: list[dict[str, Any]] = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
@@ -60,7 +62,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "mySite.wsgi.application"
 
 
-DATABASES = {
+DATABASES: dict[dict[str, Any]] = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
@@ -68,31 +70,35 @@ DATABASES = {
 }
 
 
-AUTH_PASSWORD_VALIDATORS = [
+AUTH_PASSWORD_VALIDATORS: list[dict[str, str]] = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME":
+        "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME":
+        "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+        "NAME":
+        "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME":
+        "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE: str = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE: str = "UTC"
 
-USE_I18N = True
+USE_I18N: bool = True
 
-USE_TZ = True
+USE_TZ: bool = True
 
-STATIC_URL = "static/"
+STATIC_URL: Path = "static/"
 
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DEFAULT_AUTO_FIELD: str = "django.db.models.BigAutoField"

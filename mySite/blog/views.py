@@ -1,14 +1,15 @@
 """File for frontend slice of application"""
 
 
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
-from .models import Post
+from .models import Post, PublishedManager
 
 
-def post_list(request):
+def post_list(request) -> HttpResponse:
     """Function for parsing post list"""
-    posts = Post.published.all()
+    posts: PublishedManager = Post.published.all()
     return render(
         request,
         'blog/post/list.html',
@@ -16,9 +17,9 @@ def post_list(request):
     )
 
 
-def post_detail(request, id):
+def post_detail(request, id) -> HttpResponse:
     """Function for parsing post detail"""
-    post = get_object_or_404(
+    post: Post = get_object_or_404(
         Post,
         id=id,
         status=Post.Status.PUBLISHED
