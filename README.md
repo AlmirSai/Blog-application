@@ -1,7 +1,7 @@
 # Blog Application
 
 ## Short describe
-This is pross-platform E-commeres Django application
+This is cross-platform E-commeres Django application
 In this project You can create post's, user's and manage your user's and post's
 
 In this project author use .env file for Django key. You need to generate him in .env file
