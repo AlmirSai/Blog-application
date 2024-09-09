@@ -4,7 +4,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-
+from django.urls import reverse
 
 class PublishedManager(models.Manager):
     """Class for management query sets"""
@@ -22,7 +22,10 @@ class Post(models.Model):
         PUBLISHED: tuple[str, str] = 'PB', 'Published'
 
     title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250)
+    slug = models.SlugField(
+        max_length=250,
+        unique_for_date='publish'
+    )
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -53,3 +56,10 @@ class Post(models.Model):
         Yeah, this method return not string
         """
         return self.title
+
+    def get_absolute_url(self) -> str:
+        """Method for parsing absolute url"""
+        return reverse(
+            'blog:post_detail',
+            args=[self.id]
+        )
