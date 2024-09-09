@@ -5,12 +5,14 @@ to start this project!!!
 
 
 import os
+
 from pathlib import Path
 from typing import Any
 
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mySite.settings')
 
 SECRET_KEY: str = os.getenv('SECRET_KEY', 'secrets')
 
