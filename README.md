@@ -100,12 +100,14 @@ cd mysite && python manage.py runserver
 ```
 
 ## Testing:
-Coming soon. In this project author use:
+Comming soon. In this project author use:
 ```
 - pylintr
 - flake8
 - pytest
 ```
+
+In the next month author create a new architecure for this project.
 
 ## Deployment:
 This project could support in future
